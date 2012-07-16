@@ -1,0 +1,133 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">  
+  <link rel="stylesheet" href="css/base.css">
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="css/ie.css">
+  <![endif]-->
+  <script type="text/javascript" src="http://use.typekit.com/sse5unk.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="js/libs/modernizr-2.5.2.min.js"></script>
+</head>
+<body>
+  <!-- Prompt IE 6 users to install Chrome Frame. -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+<header>
+
+	<a class="logo" href="http://seesparkbox.com/" title="See Sparkbox">Sparkbox</a>
+
+</header>
+
+<section class="content">
+
+	<header class="intro">
+
+		<div class="title">
+			<div class="wrapper">
+				<h1>Responsive Retrofitting</h1>
+				<p class="contact"><a href="http://twitter.com/bencallahan">Ben Callahan</a>, <a href="http://seesparkbox.com">Sparkbox</a></p>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<p>This repo is an experiment in responsive retrofitting. It's a positive response to more negative (but still much needed) critiques of the mobile web like <a href="http://twitter.com/brad_frost">Brad Frost's</a> <a href="http://wtfmobileweb.com">WTF Mobile Web.</a></p>
+
+			<p>Let's get started...</p>
+		</div>
+
+	</header><!-- end .intro -->
+
+	<div class="wrapper">
+
+		<h3>What Is This?</h3>
+
+		<p>There are two components to this project:
+			<ol>
+				<li>a small bookmarklet which inserts an html link and a meta tag into the head of the current page</li>
+				<li>a bunch of CSS files for any website which are reference by the link added by the bookmarklet</p>
+			</ol>
+
+			<p>So here's a use case. Someone decides they'd like to experiment with making a website (say John Gruber's http://daringfireball.com) responsive. They check to see if anyone else has already started this process and see that there is NOT a "daringfireball.net" directory in the "gh-pages" branch. They fork the repo, install the bookmarklet, create "daringfireball.net/css/retrofit.css" (in the "gh-pages" branch) with some CSS to make the site respond and submit a pull request. Once this is accepted, anyone with the bookmarklet will be able to see their CSS in action by running the bookmarklet from John's site.</p>
+
+			<p><code class="code-block">if (code.lines > 1) {
+	alert("Use a class of code-block");
+}</code></p>
+
+			<p>This simple little bookmarklet gives you a chance to do something about the bad mobile experiences you find.</p>
+
+			<p>Stop complaining. Start fixing.</p>
+
+			<p>Also, one note. This is only working in WebKit browsers right now. If someone wants to help me figure out why, I'd be much obliged.</p>
+
+			<h3>Installation</h3>
+
+			<p>Install the bookmarklet by dragging this link to you bookmark bar:</p>
+
+			<p>
+				<a class="bookmarklet" href="javascript:javascript:%20(function%20()%20{var%20jsCode%20=%20document.createElement(%27script%27);jsCode.setAttribute(%27src%27,%20%27http://sparkbox.github.com/Responsive-Retrofitting/responsive-retrofit.js%27);document.body.appendChild(jsCode);}());">Retrofit</a>
+			</p>
+
+			<h3>Use</h3>
+
+			<p>Now, you can visit any of these sites and run the bookmarklet to see the changes.</p>
+			<ul>
+				<li><a href="https://mail.google.com/mail/help/intl/en/switch.html">Switch to Gmail</a></li>
+				<li><a href="http://daringfireball.net">Daring Fireball</a></li>
+				<li><a href="http://apple.com">Apple</a></li>
+			</ul>
+
+			<h3>Contribute</h3>
+
+			<p>Everything happens in the "gh-pages" branch so that we can link to these files appropriately. In order to contribute, you'll need to fork the repo and make changes to the "gh-pages" branch. I'm not exactly a git-master, so if you know of a better way to configure this (maybe working in master and "releasing" into gh-pages) let me know.</p>
+
+			<p>You'll need a directory that's the same as "document.location.hostname" with a "css" sub directory (so for Apple, that's www.apple.com). Only one CSS file is loaded (retrofit.css) so you can use Scss or LESS or whatever you want to generate that single CSS file.</p>
+
+			<p>For dev purposes, you might want to change the reference to the CSS file in the bookmarklet to reference your repo's version. Just make sure you revert before you make a pull request.</p>
+
+			<p>You also might find it easier to work in the "incognito" mode of your favorite browser. Caching seems to get in the way pretty easily when you're doing this kind of stuff.</p>
+
+			<p>I look forward to seeing your creations!</p>
+
+		</div><!-- end .wrapper -->
+
+</section><!-- end .content -->
+
+<footer>
+
+	<ul class="contact">
+		<li><a href="info@heysparkbox.com">Email us</a></li>
+		<li><a href="http://seesparkbox.com/foundry" title="Sparkbox Foundry">The Foundry</a></li>
+	</ul><!-- end .contact -->
+
+	<small>&#169;2012 Sparkbox</small>
+
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/libs/util.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+  <!--[if lt IE 7 ]>
+    <script defer src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script defer>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+</body>
+</html>
